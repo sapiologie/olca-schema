@@ -1,0 +1,42 @@
+class:
+  name: Category
+  superClass: Entity
+
+  properties:
+    - name: "@id"
+      index: 2
+      type: string
+      doc: >
+           The reference ID (or UUID) of this entity.
+
+    - name: modelType
+      index: 3
+      type: ModelType
+      doc: >
+           The model this category is attached to.
+
+    - name: name
+      index: 4
+      type: string
+      doc: >
+           Unique category name.
+
+    - name: version
+      index: 5
+      type: string
+      doc: >
+           A version number in MAJOR.MINOR.PATCH format where the MINOR and
+           PATCH fields are optional and the fields may have leading zeros
+           (so 01.00.00 is the same as 1.0.0 or 1).
+
+    - name: category
+      index: 6
+      type: Category
+      doc: >
+           Parent category.
+
+    - name: categoryPath
+      index: 7
+      type: List[string]
+      doc: >
+          Flat list of upstream categories' names.

@@ -7,7 +7,7 @@ class:
   properties:
     - name: category
       index: 5
-      type: string
+      type: Category
       doc: >
            A full path of the category. Forward slashes are used to separate the
            segments of this path, e.g.
