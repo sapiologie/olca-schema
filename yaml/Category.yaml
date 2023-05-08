@@ -29,14 +29,19 @@ class:
            PATCH fields are optional and the fields may have leading zeros
            (so 01.00.00 is the same as 1.0.0 or 1).
 
-    - name: category
+    - name: lastChange
       index: 6
+      type: dateTime
+      doc: The timestamp when the entity was changed the last time.
+
+    - name: category
+      index: 7
       type: Category
       doc: >
            Parent category.
 
-    - name: categoryPath
-      index: 7
-      type: List[string]
+    - name: categoryType
+      index: 8
+      type: string
       doc: >
           Flat list of upstream categories' names.
